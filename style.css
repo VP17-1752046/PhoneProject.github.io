@@ -29,7 +29,7 @@ button {
 
 /* end reset css */
 
-#header {
+.header__top {
   padding: 15px 50px;
   display: flex;
   justify-content: space-between;
@@ -40,8 +40,8 @@ button {
   }
 }
 
-.header__search {
-  .header__search-searchBar {
+.header__top-search {
+  .search-bar {
     width: 500px;
     padding: 10px;
     background-color: #f5f5f5;
@@ -59,11 +59,15 @@ button {
   }
 }
 
-.header__navlinks {
+.header__top-navlinks {
   display: flex;
   gap: 20px;
 
   a > i {
     font-size: 20px;
   }
+}
+
+.header__menu {
+  background-color: #f00000;
 }
