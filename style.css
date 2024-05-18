@@ -61,10 +61,10 @@ button {
 
 .header__top-navlinks {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 
   a > i {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -93,5 +93,23 @@ button {
         font-weight: 600;
       }
     }
+  }
+}
+
+.header__mobi {
+  display: none;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 9999;
+
+  .header__mobi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
   }
 }
