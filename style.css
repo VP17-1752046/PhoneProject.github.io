@@ -69,5 +69,29 @@ button {
 }
 
 .header__menu {
+  padding: 10px 50px;
   background-color: #f00000;
+  display: flex;
+  justify-content: space-between;
+
+  .header__menu-links {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 40px;
+        height: 30px;
+      }
+
+      span {
+        font-size: 13px;
+        line-height: 22px;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        font-weight: 600;
+      }
+    }
+  }
 }
