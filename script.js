@@ -24,3 +24,30 @@ function showMenuMobi() {
 }
 
 showMenuMobi();
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".banner__slide-list");
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  document.querySelector(".next-button").addEventListener("click", nextSlide);
+  document.querySelector(".prev-button").addEventListener("click", prevSlide);
+
+  setInterval(nextSlide, 5000);
+});
