@@ -222,10 +222,12 @@ button {
 
 /* banner */
 .banner {
-  margin-top: 20px;
-  padding: 10px 50px;
+  margin-top: 10px;
+  padding: 10px;
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 
   .banner__slide {
     position: relative;
@@ -236,9 +238,6 @@ button {
       display: none;
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
       img {
         width: 100%;
         height: auto;
@@ -252,16 +251,12 @@ button {
 
   @media (max-width: 787px) {
     margin-top: 0px;
-    padding: 10px 30px;
+    padding: 10px 0;
   }
 }
 
 .prev-button,
 .next-button {
-  position: absolute;
-  top: 250px;
-  /* transform: translateY(-50%); */
-  /* background-color: rgba(0, 0, 0, 0.5); */
   color: #f00000;
   border: none;
   padding: 10px;
@@ -274,15 +269,6 @@ button {
     @media (max-width: 787px) {
       font-size: 30px;
     }
-  }
-
-  @media (max-width: 787px) {
-    padding: 5px;
-    top: 120px;
-  }
-
-  @media (max-width: 480px) {
-    top: 60px;
   }
 }
 
@@ -297,5 +283,55 @@ button {
   right: 10px;
   @media (max-width: 787px) {
     right: 5px;
+  }
+}
+
+/* favorite product */
+.favorite-product {
+  margin: 10px 50px;
+
+  .favorite-product-title {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f00000;
+    border-left: 7px solid #000000;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    h3 {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .see-more {
+      border: 1px solid #ffffff;
+      padding: 5px 15px;
+      border-radius: 15px;
+      background-color: #ffffff;
+      font-weight: 500;
+    }
+  }
+
+  .favorite-product-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .favorite-product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+
+      .product-img {
+      }
+
+      .product-price {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }
