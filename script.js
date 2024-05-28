@@ -351,3 +351,60 @@ for (let productWatch of dataWatch) {
 
   WatchList.appendChild(productWatchElement);
 }
+
+// Render airPods product
+const dataAirPods = [
+  {
+    id: 1,
+    image: "./assets/airPods1.png",
+    name: "AirPods 2 New",
+    promotional: "2.890.000đ",
+    cost: "2.890.000đ",
+  },
+  {
+    id: 2,
+    image: "./assets/airPods2.png",
+    name: "AirPods 3 New",
+    promotional: "3.890.000đ",
+    cost: "4.490.000đ",
+  },
+  {
+    id: 3,
+    image: "./assets/airPods3.png",
+    name: "AirPods Pro 2 New",
+    promotional: "5.000.000đ",
+    cost: "6.500.000đ",
+  },
+  {
+    id: 4,
+    image: "./assets/airPods4.png",
+    name: "EarPods Jack 3.5mm",
+    promotional: "290.000đ",
+    cost: "500.000đ",
+  },
+  {
+    id: 5,
+    image: "./assets/airPods5.png",
+    name: "EarPods Jack Lighnight",
+    promotional: "490.000đ",
+    cost: "700.000đ",
+  },
+];
+
+const airPodsList = document.querySelector(".airPods-content");
+
+for (let productAirPods of dataAirPods) {
+  const productAirPodsElement = document.createElement("div");
+  productAirPodsElement.classList.add("airPods-list");
+
+  productAirPodsElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productAirPods.image}" alt="watch1"
+          /></a>
+          <a href="#" class="product-name">${productAirPods.name}</a>
+          <div class="product-price">
+            <span class="promotional-price">${productAirPods.promotional}</span>
+            <span class="cost-price">${productAirPods.cost}</span>
+          </div>`;
+
+  airPodsList.appendChild(productAirPodsElement);
+}
