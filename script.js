@@ -284,7 +284,7 @@ for (let productMac of dataMac) {
   productMacElement.classList.add("Mac-list");
 
   productMacElement.innerHTML = `<a href="#" class="product-img"
-            ><img src="${productMac.image}" alt="iPhone1"
+            ><img src="${productMac.image}" alt="Mac1"
           /></a>
           <a href="#" class="product-name">${productMac.name}</a>
           <div class="product-price">
@@ -293,4 +293,61 @@ for (let productMac of dataMac) {
           </div>`;
 
   MacList.appendChild(productMacElement);
+}
+
+// Render Watch product
+const dataWatch = [
+  {
+    id: 1,
+    image: "./assets/watch1.png",
+    name: "Apple Watch Ultra 49MM with Trail Loop",
+    promotional: "14.990.000đ",
+    cost: "15.990.000đ",
+  },
+  {
+    id: 2,
+    image: "./assets/watch2.png",
+    name: "Apple Watch Ultra 49MM with Alpine Loop",
+    promotional: "11.790.000đ",
+    cost: "13.790.000đ",
+  },
+  {
+    id: 3,
+    image: "./assets/watch3.png",
+    name: "Apple Watch Ultra 49MM with Ocean Band",
+    promotional: "14.590.000đ",
+    cost: "15.590.000đ",
+  },
+  {
+    id: 4,
+    image: "./assets/watch4.png",
+    name: "Apple Watch Series 8 GPS 41MM",
+    promotional: "7.490.000đ",
+    cost: "9.490.000đ",
+  },
+  {
+    id: 5,
+    image: "./assets/watch5.png",
+    name: "Apple Watch Series 8 GPS 45MM",
+    promotional: "6.990.000đ",
+    cost: "8.990.000đ",
+  },
+];
+
+const WatchList = document.querySelector(".Watch-content");
+
+for (let productWatch of dataWatch) {
+  const productWatchElement = document.createElement("div");
+  productWatchElement.classList.add("Watch-list");
+
+  productWatchElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productWatch.image}" alt="watch1"
+          /></a>
+          <a href="#" class="product-name">${productWatch.name}</a>
+          <div class="product-price">
+            <span class="promotional-price">${productWatch.promotional}</span>
+            <span class="cost-price">${productWatch.cost}</span>
+          </div>`;
+
+  WatchList.appendChild(productWatchElement);
 }

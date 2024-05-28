@@ -290,7 +290,8 @@ button {
 .favorite-product,
 .iPhone,
 .iPad,
-.Mac {
+.Mac,
+.Watch {
   margin: 10px 50px;
 
   @media (max-width: 787px) {
@@ -300,7 +301,8 @@ button {
   .favorite-product-title,
   .iPhone-title,
   .iPad-title,
-  .Mac-title {
+  .Mac-title,
+  .Watch-title {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -328,7 +330,8 @@ button {
   .favorite-product-content,
   .iPhone-content,
   .iPad-content,
-  .Mac-content {
+  .Mac-content,
+  .Watch-content {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -340,7 +343,8 @@ button {
     .favorite-product-list,
     .iPhone-list,
     .iPad-list,
-    .Mac-list {
+    .Mac-list,
+    .Watch-list {
       display: flex;
       flex-direction: column;
       gap: 20px;
