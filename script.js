@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Render favorite product
-const data = [
+const dataFavorite = [
   {
     id: 1,
     image: "./assets/favorite1.png",
@@ -87,18 +87,96 @@ const data = [
 
 const favoriteProductList = document.querySelector(".favorite-product-content");
 
-for (let product of data) {
-  const productElement = document.createElement("div");
-  productElement.classList.add("favorite-product-list");
+for (let productFavorite of dataFavorite) {
+  const productFavoriteElement = document.createElement("div");
+  productFavoriteElement.classList.add("favorite-product-list");
 
-  productElement.innerHTML = `<a href="#" class="product-img"
-            ><img src="${product.image}" alt="favorite1"
+  productFavoriteElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productFavorite.image}" alt="favorite1"
           /></a>
-          <a href="#" class="product-name">${product.name}</a>
+          <a href="#" class="product-name">${productFavorite.name}</a>
           <div class="product-price">
-            <span class="promotional-price">${product.promotional}</span>
-            <span class="cost-price">${product.cost}</span>
+            <span class="promotional-price">${productFavorite.promotional}</span>
+            <span class="cost-price">${productFavorite.cost}</span>
           </div>`;
 
-  favoriteProductList.appendChild(productElement);
+  favoriteProductList.appendChild(productFavoriteElement);
+}
+
+// Render favorite product
+const dataIphone = [
+  {
+    id: 1,
+    image: "./assets/iphone1.png",
+    name: "iPhone 13 Pro Max 128GB Used",
+    promotional: "15.900.000đ",
+    cost: "17.900.000đ",
+  },
+  {
+    id: 2,
+    image: "./assets/iphone2.png",
+    name: "iPhone 13 Pro 128GB Used",
+    promotional: "13.900.000đ",
+    cost: "14.900.000đ",
+  },
+  {
+    id: 3,
+    image: "./assets/iphone3.png",
+    name: "iPhone 15 128GB",
+    promotional: "20.900.000đ",
+    cost: "22.900.000đ",
+  },
+  {
+    id: 4,
+    image: "./assets/iphone4.png",
+    name: "iPhone 15 Plus 128GB",
+    promotional: "21.500.000đ",
+    cost: "24.900.000đ",
+  },
+  {
+    id: 5,
+    image: "./assets/iphone5.png",
+    name: "iPhone 14 Plus 512GB",
+    promotional: "21.900.000đ",
+    cost: "22.900.000đ",
+  },
+  {
+    id: 6,
+    image: "./assets/iphone6.png",
+    name: "iPhone 14 Plus 256GB",
+    promotional: "20.900.000đ",
+    cost: "22.900.000đ",
+  },
+  {
+    id: 7,
+    image: "./assets/iphone7.png",
+    name: "iPhone 14 256GB",
+    promotional: "19.500.000đ",
+    cost: "20.500.000đ",
+  },
+  {
+    id: 8,
+    image: "./assets/iphone8.png",
+    name: "iPhone 14 128GB",
+    promotional: "17.900.000đ",
+    cost: "18.900.000đ",
+  },
+];
+
+const iPhoneList = document.querySelector(".iPhone-content");
+
+for (let productIphone of dataIphone) {
+  const productIphoneElement = document.createElement("div");
+  productIphoneElement.classList.add("iPhone-list");
+
+  productIphoneElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productIphone.image}" alt="iPhone1"
+          /></a>
+          <a href="#" class="product-name">${productIphone.name}</a>
+          <div class="product-price">
+            <span class="promotional-price">${productIphone.promotional}</span>
+            <span class="cost-price">${productIphone.cost}</span>
+          </div>`;
+
+  iPhoneList.appendChild(productIphoneElement);
 }
