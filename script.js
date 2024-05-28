@@ -103,7 +103,7 @@ for (let productFavorite of dataFavorite) {
   favoriteProductList.appendChild(productFavoriteElement);
 }
 
-// Render favorite product
+// Render iPhone product
 const dataIphone = [
   {
     id: 1,
@@ -179,4 +179,68 @@ for (let productIphone of dataIphone) {
           </div>`;
 
   iPhoneList.appendChild(productIphoneElement);
+}
+
+// Render iPad product
+const dataIpad = [
+  {
+    id: 1,
+    image: "./assets/ipad1.png",
+    name: 'iPad Pro 12.9" M2 128GB Wi-Fi',
+    promotional: "28.190.000đ",
+    cost: "29.190.000đ",
+  },
+  {
+    id: 2,
+    image: "./assets/ipad2.png",
+    name: 'iPad Pro 12.9" M2 128GB Wi-Fi + Cellular',
+    promotional: "20.990.000đ",
+    cost: "21.990.000đ",
+  },
+  {
+    id: 3,
+    image: "./assets/ipad3.png",
+    name: 'iPad Pro 11" M2 128GB Wi-Fi',
+    promotional: "15.590.000đ",
+    cost: "16.590.000đ",
+  },
+  {
+    id: 4,
+    image: "./assets/ipad4.png",
+    name: 'iPad Pro 11" M2 128GB Wi-Fi + Cellular',
+    promotional: "20.989.000đ",
+    cost: "21.989.000đ",
+  },
+  {
+    id: 5,
+    image: "./assets/ipad5.png",
+    name: 'iPad Pro 12.9" M1 128GB Wi-Fi',
+    promotional: "23.990.000đ",
+    cost: "24.990.000đ",
+  },
+  {
+    id: 6,
+    image: "./assets/ipad6.png",
+    name: 'iPad Pro 12.9" M1 128GB Wi-Fi + Cellular',
+    promotional: "29.290.000đ",
+    cost: "30.290.000đ",
+  },
+];
+
+const iPadList = document.querySelector(".iPad-content");
+
+for (let productIpad of dataIpad) {
+  const productIpadElement = document.createElement("div");
+  productIpadElement.classList.add("iPad-list");
+
+  productIpadElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productIpad.image}" alt="iPad1"
+          /></a>
+          <a href="#" class="product-name">${productIpad.name}</a>
+          <div class="product-price">
+            <span class="promotional-price">${productIpad.promotional}</span>
+            <span class="cost-price">${productIpad.cost}</span>
+          </div>`;
+
+  iPadList.appendChild(productIpadElement);
 }
