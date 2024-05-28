@@ -244,3 +244,53 @@ for (let productIpad of dataIpad) {
 
   iPadList.appendChild(productIpadElement);
 }
+
+// Render MAC product
+const dataMac = [
+  {
+    id: 1,
+    image: "./assets/mac1.png",
+    name: "Macbook Air M1 8GB - 256GB",
+    promotional: "18.900.000đ",
+    cost: "20.900.000đ",
+  },
+  {
+    id: 2,
+    image: "./assets/mac2.png",
+    name: "Macbook Pro M1 8GB - 256GB",
+    promotional: "28.500.000đ",
+    cost: "30.500.000đ",
+  },
+  {
+    id: 3,
+    image: "./assets/mac3.png",
+    name: "Macbook Air M2 8GB - 256GB",
+    promotional: "25.900.000đ",
+    cost: "27.900.000đ",
+  },
+  {
+    id: 4,
+    image: "./assets/mac4.png",
+    name: "Macbook Pro M2 8GB - 256GB",
+    promotional: "28.900.000đ",
+    cost: "30.900.000đ",
+  },
+];
+
+const MacList = document.querySelector(".Mac-content");
+
+for (let productMac of dataMac) {
+  const productMacElement = document.createElement("div");
+  productMacElement.classList.add("Mac-list");
+
+  productMacElement.innerHTML = `<a href="#" class="product-img"
+            ><img src="${productMac.image}" alt="iPhone1"
+          /></a>
+          <a href="#" class="product-name">${productMac.name}</a>
+          <div class="product-price">
+            <span class="promotional-price">${productMac.promotional}</span>
+            <span class="cost-price">${productMac.cost}</span>
+          </div>`;
+
+  MacList.appendChild(productMacElement);
+}
