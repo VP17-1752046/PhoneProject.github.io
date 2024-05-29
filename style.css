@@ -402,6 +402,10 @@ button {
   padding: 20px;
   border-bottom: 3px solid #f00000;
 
+  @media (max-width: 787px) {
+    display: none;
+  }
+
   .policy-list {
     display: flex;
     align-items: center;
