@@ -393,3 +393,23 @@ button {
     }
   }
 }
+
+.policy {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-bottom: 3px solid #f00000;
+
+  .policy-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .policy-content {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
