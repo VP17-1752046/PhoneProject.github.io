@@ -399,7 +399,7 @@ button {
   display: flex;
   justify-content: space-between;
   background-color: #f6f6f6;
-  padding: 20px;
+  padding: 20px 50px;
   border-bottom: 3px solid #f00000;
 
   @media (max-width: 787px) {
@@ -414,6 +414,50 @@ button {
     .policy-content {
       text-transform: uppercase;
       font-weight: 600;
+    }
+  }
+}
+
+#footer {
+  padding: 20px 50px;
+
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .footer__top-logo {
+      margin-bottom: 20px;
+
+      img {
+        width: 250px;
+        height: auto;
+      }
+    }
+
+    .footer__top-methods,
+    .footer__top-delivery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    .footer__top-delivery > img {
+      width: 100px;
     }
   }
 }
