@@ -420,6 +420,8 @@ button {
 
 #footer {
   padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
 
   .footer__top {
     display: flex;
@@ -458,6 +460,124 @@ button {
 
     .footer__top-delivery > img {
       width: 100px;
+    }
+  }
+
+  .footer__about {
+    .footer__about-title {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .footer__about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+
+  .footer__policy {
+    display: flex;
+    flex-direction: column;
+
+    .footer__policy-title {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .footer__policy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+
+  .contact-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .contact-title {
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #0a0a0a;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .contact-desc {
+        span {
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: 500;
+          color: #0a0a0a;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .bold {
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .social-icon {
+      display: flex;
+      gap: 20px;
+      a {
+        i {
+          font-size: 30px;
+          color: #f00000;
+        }
+
+        .fa-facebook-square {
+          color: #0866ff;
+        }
+
+        .fa-instagram {
+          color: #e1306c;
+        }
+      }
     }
   }
 }
