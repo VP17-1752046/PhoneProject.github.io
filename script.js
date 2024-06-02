@@ -91,7 +91,7 @@ for (let productFavorite of dataFavorite) {
   const productFavoriteElement = document.createElement("div");
   productFavoriteElement.classList.add("favorite-product-list");
 
-  productFavoriteElement.innerHTML = `<a href="#" class="product-img"
+  productFavoriteElement.innerHTML = `<a href="detail-product.html" class="product-img"
             ><img src="${productFavorite.image}" alt="favorite1"
           /></a>
           <a href="#" class="product-name">${productFavorite.name}</a>
