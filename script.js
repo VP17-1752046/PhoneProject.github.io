@@ -1,3 +1,13 @@
+// Sticky header
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header__top");
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
 function showMenuMobi() {
   const hamburgerButton = document.querySelector(".hamburger-button");
   const mobiMenu = document.querySelector(".header__mobi");

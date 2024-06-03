@@ -30,10 +30,12 @@ button {
 /* end reset css */
 
 .header__top {
+  position: sticky;
   padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 
   @media (max-width: 787px) {
     padding: 10px 10px;
@@ -42,67 +44,76 @@ button {
   .fa {
     color: #f00000;
   }
-}
 
-.header__top-logo {
-  img {
-    @media (max-width: 787px) {
-      width: 150px;
-      height: auto;
-    }
-    @media (max-width: 480px) {
-      width: 100px;
-      height: auto;
-    }
-  }
-}
-
-.header__top-search {
-  .search-bar {
-    width: 500px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 50px;
-
-    @media (max-width: 787px) {
-      width: 300px;
-    }
-
-    @media (max-width: 480px) {
-      width: 180px;
-    }
-
-    .search-input {
-      width: 90%;
-      border: 0px;
-      background-color: transparent;
-    }
-
-    .search-button {
-      float: right;
+  .header__top-logo {
+    img {
+      @media (max-width: 787px) {
+        width: 150px;
+        height: auto;
+      }
+      @media (max-width: 480px) {
+        width: 100px;
+        height: auto;
+      }
     }
   }
-}
 
-.header__top-navlinks {
-  display: flex;
-  gap: 50px;
+  .header__top-search {
+    .search-bar {
+      width: 500px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 50px;
 
-  @media (max-width: 787px) {
+      @media (max-width: 787px) {
+        width: 300px;
+      }
+
+      @media (max-width: 480px) {
+        width: 180px;
+      }
+
+      .search-input {
+        width: 90%;
+        border: 0px;
+        background-color: transparent;
+      }
+
+      .search-button {
+        float: right;
+      }
+    }
+  }
+
+  .header__top-navlinks {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 787px) {
+      display: none;
+    }
+
+    a > i {
+      font-size: 24px;
+    }
+  }
+
+  .header__top-hamburger {
     display: none;
-  }
 
-  a > i {
-    font-size: 24px;
+    @media (max-width: 787px) {
+      display: block;
+    }
   }
 }
 
-.header__top-hamburger {
-  display: none;
-
-  @media (max-width: 787px) {
-    display: block;
-  }
+.header__top.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #ddd;
 }
 
 .header__menu {
