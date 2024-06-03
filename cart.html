@@ -12,7 +12,7 @@
   </head>
   <body>
     <header id="header">
-      <div class="header__top">
+      <div class="header__top" id="header__top">
         <div class="header__top-logo">
           <a href="./index.html"><img src="./assets/logo.png" alt="logo" /></a>
         </div>
@@ -121,121 +121,6 @@
       </div>
     </header>
 
-    <section class="product-detail">
-      <div class="left-product-detail">
-        <div class="galery-product">
-          <a href="#" class="single-img">
-            <img src="./assets/favorite1.png" width="100%" alt="big-img" />
-          </a>
-          <div class="thumbnail-img">
-            <div class="small-img-col">
-              <img src="./assets/favorite2.png" width="100%" alt="small1" />
-            </div>
-            <div class="small-img-col">
-              <img src="./assets/favorite3.png" width="100%" alt="small2" />
-            </div>
-            <div class="small-img-col">
-              <img src="./assets/favorite4.png" width="100%" alt="small3" />
-            </div>
-          </div>
-        </div>
-        <div class="committed-product">
-          <p class="committed-product-title">
-            <img src="./assets/committed1.png" alt="committed1" />sản phẩm cam
-            kết chính hãng
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Bảo hành 12
-            tháng với máy new seal
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Hỗ trợ cài đặt
-            phần mềm TRỌN ĐỜI
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Trả góp 0% qua
-            thẻ tín dụng
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Trả góp lãi
-            suất thấp qua Công ty tài chính
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Giao hàng tận
-            nơi và cài đặt miễn phí
-          </p>
-          <p class="committed-product-desc">
-            <img src="./assets/committed2.png" alt="committed2" />Hotline: 0903
-            23 23 23 (09:00 - 22:00 mỗi ngày)
-          </p>
-        </div>
-      </div>
-      <div class="right-product-detail">
-        <div class="product-detail-name">Macbook Air M1 8GB - 256GB</div>
-        <div class="product-detail-color">
-          <p>màu sắc</p>
-          <div class="color-group">
-            <div class="color-product">Space Gray</div>
-            <div class="color-product">Silver</div>
-            <div class="color-product">Gold</div>
-          </div>
-        </div>
-        <div class="product-detail-price">
-          <p class="price-text">Giá bán</p>
-          <p class="price-sale">18.900.000đ</p>
-          <p class="price-cost">20.900.000đ</p>
-        </div>
-        <div class="product-detail-coupon">
-          <div class="coupon-title">Ưu đãi khi mua MacBook Air M1</div>
-          <div class="coupon-content">
-            <p>
-              - TẶNG 10 LẦN DÁN CƯỜNG LỰC iPhone MIỄN PHÍ TRỊ GIÁ 1.500.000Đ
-            </p>
-            <p>- TRỢ GIÁ ĐẾN 1.000.000Đ KHI THAM GIA THU CŨ ĐỔI MỚI</p>
-            <p>- TẶNG VOUCHER SINH NHẬT TRỊ GIÁ 500.000Đ</p>
-            <p>- GIẢM ĐẾN 15% KHI MUA KÈM PHỤ KIỆN</p>
-          </div>
-        </div>
-        <div class="product-detail-buy">
-          <a href="#"
-            ><p class="buy-now">Mua ngay</p>
-            <p>Ship nội thành trong ngày</p>
-          </a>
-        </div>
-        <div class="product-detail-cart">
-          <a href="#"
-            ><i class="fa fa-shopping-cart" aria-hidden="true"></i> thêm giỏ
-            hàng</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Popup structure -->
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <span class="close-popup" id="closePopup">&times;</span>
-        <h2>Giỏ hàng của bạn</h2>
-        <div class="product-popup">
-          <div class="product-popup-title">
-            <div>Hình ảnh</div>
-            <div>Tên sản phẩm</div>
-            <div>Số lượng</div>
-            <div>Thành tiền</div>
-          </div>
-          <div class="product-popup-content">
-            <div class="popup-img">
-              <img src="./assets/favorite1.png" alt="fav1" />
-            </div>
-            <div class="popup-name">iPhone 15 Pro Max 256GB</div>
-            <div class="popup-quality">1</div>
-            <div class="popup-price">29.900.000đ</div>
-          </div>
-        </div>
-        <button class="popup-button">Tiếp tục mua sắm</button>
-      </div>
-    </div>
-
     <footer id="footer">
       <div class="footer__top">
         <div class="footer__top-logo">
@@ -330,50 +215,5 @@
       </div>
     </div>
     <script src="./script.js"></script>
-    <script>
-      const productDetailCart = document.querySelector(".product-detail-cart");
-      const popup = document.getElementById("popup");
-      const closePopup = document.getElementById("closePopup");
-
-      function togglePopup() {
-        popup.classList.toggle("show");
-      }
-
-      productDetailCart.addEventListener("click", togglePopup);
-
-      closePopup.addEventListener("click", togglePopup);
-
-      function updateCartCount(count) {
-        const cartCount = document.querySelector(
-          ".header__top-navlinks .fa-shopping-cart"
-        );
-        cartCount.innerHTML = `<span class="cart-count">${count}</span>`;
-      }
-
-      document
-        .querySelector(".product-detail-cart a")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-
-          let count = parseInt(localStorage.getItem("cartCount")) || 0;
-          count++;
-          localStorage.setItem("cartCount", count);
-
-          updateCartCount(count);
-
-          alert("Product added to cart!");
-        });
-
-      // Select the shopping cart icon
-      const cartIcon = document.querySelector(
-        ".header__top-navlinks .fa-shopping-cart"
-      );
-
-      // Add click event listener to the cart icon
-      cartIcon.addEventListener("click", function () {
-        // Navigate to the cart page
-        window.location.href = "cart.html"; // Replace 'cart.html' with your actual cart page URL
-      });
-    </script>
   </body>
 </html>

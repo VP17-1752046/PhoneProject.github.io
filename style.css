@@ -45,6 +45,10 @@ button {
     color: #f00000;
   }
 
+  .fa-shopping-cart {
+    position: relative;
+  }
+
   .header__top-logo {
     img {
       @media (max-width: 787px) {
@@ -883,4 +887,86 @@ button {
       }
     }
   }
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.product-popup {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .product-popup-title {
+    font-weight: 600;
+    padding: 10px;
+    background: #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-popup-content {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .popup-img {
+      width: 10%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .popup-name {
+      font-size: 14px;
+    }
+  }
+}
+
+.popup-button {
+  padding: 10px;
+  background: #d70018;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.cart-count {
+  background-color: #ff0000; /* Background color */
+  color: #fff; /* Text color */
+  padding: 5px 10px; /* Padding around the count */
+  border-radius: 50%; /* Make it a circle */
+  font-size: 14px; /* Font size */
+  position: absolute; /* Position it relative to its parent */
+  top: 15px; /* Adjust vertical position */
+  right: -22px; /* Adjust horizontal position */
 }
