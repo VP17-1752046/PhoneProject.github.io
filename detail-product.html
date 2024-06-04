@@ -121,7 +121,7 @@
       </div>
     </header>
 
-    <section class="product-detail">
+    <section class="product-detail" id="product-details">
       <div class="left-product-detail">
         <div class="galery-product">
           <a href="#" class="single-img">
@@ -330,50 +330,6 @@
       </div>
     </div>
     <script src="./script.js"></script>
-    <script>
-      const productDetailCart = document.querySelector(".product-detail-cart");
-      const popup = document.getElementById("popup");
-      const closePopup = document.getElementById("closePopup");
-
-      function togglePopup() {
-        popup.classList.toggle("show");
-      }
-
-      productDetailCart.addEventListener("click", togglePopup);
-
-      closePopup.addEventListener("click", togglePopup);
-
-      function updateCartCount(count) {
-        const cartCount = document.querySelector(
-          ".header__top-navlinks .fa-shopping-cart"
-        );
-        cartCount.innerHTML = `<span class="cart-count">${count}</span>`;
-      }
-
-      document
-        .querySelector(".product-detail-cart a")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-
-          let count = parseInt(localStorage.getItem("cartCount")) || 0;
-          count++;
-          localStorage.setItem("cartCount", count);
-
-          updateCartCount(count);
-
-          alert("Product added to cart!");
-        });
-
-      // Select the shopping cart icon
-      const cartIcon = document.querySelector(
-        ".header__top-navlinks .fa-shopping-cart"
-      );
-
-      // Add click event listener to the cart icon
-      cartIcon.addEventListener("click", function () {
-        // Navigate to the cart page
-        window.location.href = "cart.html"; // Replace 'cart.html' with your actual cart page URL
-      });
-    </script>
+    <script src="./detail-product.js"></script>
   </body>
 </html>
