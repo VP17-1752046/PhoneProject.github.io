@@ -163,3 +163,26 @@ if (cartIcon) {
     window.location.href = "cart.html";
   });
 }
+
+// Func Add To Cart product to page Cart
+const addToCartButton = document.querySelector(".product-detail-cart a");
+
+addToCartButton.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const productId = product.id;
+  const productImage = product.image;
+  const productName = product.name;
+  const productPrice = product.salePrice;
+
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cartItems.push({
+    id: productId,
+    image: productImage,
+    name: productName,
+    price: productPrice,
+  });
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  window.location.href = "cart.html";
+});

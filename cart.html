@@ -132,12 +132,12 @@
             <div>Thành tiền</div>
           </div>
           <div class="product-cart-content">
-            <div class="cart-img">
+            <!-- <div class="cart-img">
               <img src="./assets/favorite1.png" alt="fav1" />
             </div>
             <div class="cart-name">iPhone 15 Pro Max 256GB</div>
             <div class="cart-quality">1</div>
-            <div class="cart-price">29.900.000đ</div>
+            <div class="cart-price">29.900.000đ</div> -->
           </div>
         </div>
         <div class="total-price">
@@ -284,5 +284,24 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script>
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      const cartContent = document.querySelector(".product-cart-content");
+
+      cartItems.forEach(function (item) {
+        const cartItemElement = document.createElement("div");
+        cartItemElement.classList.add("product-cart-content-item");
+        cartItemElement.innerHTML = `
+        <div class="cart-img">
+            <img src="${item.image}" alt="${item.name}" />
+        </div>
+        <div class="cart-name">${item.name}</div>
+        <div class="cart-quality">1</div>
+        <div class="cart-price">${item.price}</div>
+    `;
+        cartContent.appendChild(cartItemElement);
+      });
+    </script>
   </body>
 </html>
