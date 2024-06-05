@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Cart</title>
   </head>
   <body>
     <header id="header">
@@ -120,6 +120,75 @@
         </div>
       </div>
     </header>
+
+    <section class="cart">
+      <div class="cart-left-side">
+        <div class="your-cart">giỏ hàng của bạn</div>
+        <div class="product-cart">
+          <div class="product-cart-title">
+            <div>Hình ảnh</div>
+            <div>Tên sản phẩm</div>
+            <div>Số lượng</div>
+            <div>Thành tiền</div>
+          </div>
+          <div class="product-cart-content">
+            <div class="cart-img">
+              <img src="./assets/favorite1.png" alt="fav1" />
+            </div>
+            <div class="cart-name">iPhone 15 Pro Max 256GB</div>
+            <div class="cart-quality">1</div>
+            <div class="cart-price">29.900.000đ</div>
+          </div>
+        </div>
+        <div class="total-price">
+          <span>Tổng tiền:</span>
+          <span class="red-price">29.900.000đ</span>
+        </div>
+      </div>
+      <div class="cart-right-side">
+        <div class="cart-method">
+          <div class="cart-method-title">hình thức thanh toán:</div>
+          <div class="cart-method-content">
+            <div class="cart-method-option">
+              <input type="radio" id="payment-store" name="payment" required />
+              <label for="payment-store">Nhận hàng tại cửa hàng</label>
+            </div>
+            <div class="cart-method-option">
+              <input type="radio" id="payment-cod" name="payment" required />
+              <label for="payment-cod">Thanh toán khi nhận hàng</label>
+            </div>
+          </div>
+        </div>
+        <div class="cart-shipping">
+          <div class="cart-shipping-title">thông tin giao hàng</div>
+          <div class="cart-shipping-content">
+            <div class="shipping-information">
+              <input type="text" id="name" name="name" placeholder="Họ tên" />
+            </div>
+            <div class="shipping-information">
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Số điện thoại"
+              />
+            </div>
+            <div class="shipping-information">
+              <input type="text" id="email" name="email" placeholder="Email" />
+            </div>
+            <div class="shipping-information">
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Địa chỉ"
+              />
+            </div>
+            <button class="checkout">thanh toán</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer id="footer">
       <div class="footer__top">

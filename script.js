@@ -8,6 +8,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Func Mobi menu
 function showMenuMobi() {
   const hamburgerButton = document.querySelector(".hamburger-button");
   const mobiMenu = document.querySelector(".header__mobi");
