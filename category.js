@@ -233,7 +233,9 @@ function renderCategory(category) {
   }
 }
 
-const categoryLinks = document.querySelectorAll(".header__menu-links a");
+const categoryLinks = document.querySelectorAll(
+  ".header__menu-links a, .header__mobi-nav ul li .category-link"
+);
 categoryLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
