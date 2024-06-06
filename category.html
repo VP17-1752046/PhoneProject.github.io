@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Cart</title>
+    <title>Category</title>
   </head>
   <body>
     <header id="header">
@@ -29,7 +29,7 @@
         <div class="header__top-navlinks">
           <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> </a>
           <a href="#"><i class="fa fa-user" aria-hidden="true"></i> </a>
-          <a href="#"
+          <a href="./cart.html"
             ><i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </a>
         </div>
@@ -41,31 +41,31 @@
       </div>
       <div class="header__menu">
         <div class="header__menu-links">
-          <a href="./category.html" data-category="iphone">
+          <a href="#" data-category="iphone">
             <img src="./assets/header_iphone.png" alt="iphone" />
             <span>iPhone</span>
           </a>
         </div>
         <div class="header__menu-links">
-          <a href="./category.html" data-category="ipad">
+          <a href="#" data-category="ipad">
             <img src="./assets/header_ipad.png" alt="ipad" />
             <span>iPad</span>
           </a>
         </div>
         <div class="header__menu-links">
-          <a href="./category.html" data-category="watch">
+          <a href="#" data-category="watch">
             <img src="./assets/header_watch.png" alt="watch" />
             <span>Watch</span>
           </a>
         </div>
         <div class="header__menu-links">
-          <a href="./category.html" data-category="mac">
+          <a href="#" data-category="mac">
             <img src="./assets/header_mac.png" alt="mac" />
             <span>Mac</span>
           </a>
         </div>
         <div class="header__menu-links">
-          <a href="./category.html" data-category="airpod">
+          <a href="#" data-category="airpod">
             <img src="./assets/header_airpod.png" alt="airpod" />
             <span>AirPods</span>
           </a>
@@ -121,73 +121,12 @@
       </div>
     </header>
 
-    <section class="cart">
-      <div class="cart-left-side">
-        <div class="your-cart">giỏ hàng của bạn</div>
-        <div class="product-cart">
-          <div class="product-cart-title">
-            <div>Hình ảnh</div>
-            <div>Tên sản phẩm</div>
-            <div>Số lượng</div>
-            <div>Thành tiền</div>
-          </div>
-          <div class="product-cart-content">
-            <!-- <div class="cart-img">
-              <img src="./assets/favorite1.png" alt="fav1" />
-            </div>
-            <div class="cart-name">iPhone 15 Pro Max 256GB</div>
-            <div class="cart-quality">1</div>
-            <div class="cart-price">29.900.000đ</div> -->
-          </div>
-        </div>
-        <!-- <div class="total-price">
-          <span>Tổng tiền:</span>
-          <span class="red-price">29.900.000đ</span>
-        </div> -->
+    <section class="category">
+      <div class="category-title">
+        <h3>iPhone</h3>
+        <!-- <a href="#" class="see-more">xem thêm</a> -->
       </div>
-      <div class="cart-right-side">
-        <div class="cart-method">
-          <div class="cart-method-title">hình thức thanh toán:</div>
-          <div class="cart-method-content">
-            <div class="cart-method-option">
-              <input type="radio" id="payment-store" name="payment" required />
-              <label for="payment-store">Nhận hàng tại cửa hàng</label>
-            </div>
-            <div class="cart-method-option">
-              <input type="radio" id="payment-cod" name="payment" required />
-              <label for="payment-cod">Thanh toán khi nhận hàng</label>
-            </div>
-          </div>
-        </div>
-        <div class="cart-shipping">
-          <div class="cart-shipping-title">thông tin giao hàng</div>
-          <div class="cart-shipping-content">
-            <div class="shipping-information">
-              <input type="text" id="name" name="name" placeholder="Họ tên" />
-            </div>
-            <div class="shipping-information">
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                placeholder="Số điện thoại"
-              />
-            </div>
-            <div class="shipping-information">
-              <input type="text" id="email" name="email" placeholder="Email" />
-            </div>
-            <div class="shipping-information">
-              <input
-                type="text"
-                id="address"
-                name="address"
-                placeholder="Địa chỉ"
-              />
-            </div>
-            <button class="checkout">thanh toán</button>
-          </div>
-        </div>
-      </div>
+      <div class="category-content"></div>
     </section>
 
     <footer id="footer">
@@ -284,6 +223,6 @@
       </div>
     </div>
     <script src="./script.js"></script>
-    <script src="./cart.js"></script>
+    <script src="./category.js"></script>
   </body>
 </html>

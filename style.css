@@ -313,7 +313,8 @@ button {
 .iPad,
 .Mac,
 .Watch,
-.airPods {
+.airPods,
+.category {
   margin: 10px 50px 30px;
 
   @media (max-width: 787px) {
@@ -325,7 +326,8 @@ button {
   .iPad-title,
   .Mac-title,
   .Watch-title,
-  .airPods-title {
+  .airPods-title,
+  .category-title {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -355,7 +357,8 @@ button {
   .iPad-content,
   .Mac-content,
   .Watch-content,
-  .airPods-content {
+  .airPods-content,
+  .category-content {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -369,7 +372,8 @@ button {
     .iPad-list,
     .Mac-list,
     .Watch-list,
-    .airPods-list {
+    .airPods-list,
+    .category-list {
       display: flex;
       flex-direction: column;
       gap: 20px;
