@@ -128,6 +128,9 @@ if (product) {
     popup.classList.toggle("show");
   }
 
+  const continueShoppingButton = document.querySelector(".popup-button");
+  continueShoppingButton.addEventListener("click", togglePopup);
+
   productDetailCart.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -184,5 +187,5 @@ addToCartButton.addEventListener("click", function (event) {
   });
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-  window.location.href = "cart.html";
+  // window.location.href = "cart.html";
 });

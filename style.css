@@ -1046,10 +1046,19 @@ button {
           display: flex;
           flex-direction: column;
           align-items: center;
+          gap: 5px;
 
           img {
             width: 100%;
             height: auto;
+          }
+
+          .cart-delete {
+            background: #eee;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
           }
         }
 
@@ -1059,7 +1068,7 @@ button {
       }
     }
 
-    .total-price {
+    /* .total-price {
       margin-top: 10px;
       display: flex;
       justify-content: space-between;
@@ -1070,7 +1079,7 @@ button {
       .red-price {
         color: #f00000;
       }
-    }
+    } */
   }
 
   .cart-right-side {
